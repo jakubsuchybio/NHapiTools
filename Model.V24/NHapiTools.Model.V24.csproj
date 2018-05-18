@@ -98,7 +98,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="..\NHapiTools.snk">
       <Link>NHapiTools.snk</Link>
     </None>
