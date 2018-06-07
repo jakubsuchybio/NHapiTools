@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NHapi.Base.Model;
 using NHapi.Base.Util;
 
@@ -24,7 +20,7 @@ namespace NHapiTools.Base.Util
         /// <summary>
         /// // Application Reject. Send if the application does not support of accepts the messages.
         /// </summary>
-        AR  
+        AR
     }
 
     /// <summary>
@@ -118,7 +114,8 @@ namespace NHapiTools.Base.Util
             terser.Set("/MSH-5", sendingApp);
             terser.Set("/MSH-6", sendingEnv);
             terser.Set("/MSH-7", DateTime.Now.ToString("yyyyMMddmmhh"));
-            terser.Set("/MSH-9", "ACK");
+            terser.Set("/MSH-9-1", "ACK");
+            terser.Set("/MSH-9-3", "ACK");
             terser.Set("/MSH-12", version);
             terser.Set("/MSA-1", Enum.GetName(typeof(AckTypes), ackResult));
             terser.Set("/MSA-2", Terser.Get(inboundHeader, 10, 0, 1, 1));
